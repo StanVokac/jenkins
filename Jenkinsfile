@@ -1,10 +1,14 @@
 pipeline {
     agent any
 
+    environment {
+        NAME = "Stanfa"
+    }
+
     stages {
         stage("Datascientest Variables") {
             steps {
-                sh "printenv"
+                echo "School = ${env.NAME}""
             }
         }
     }
