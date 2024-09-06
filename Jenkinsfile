@@ -1,14 +1,13 @@
 pipeline {
     agent any
-
     environment {
-        NAME = "Stanfa"
+        NAMES = "STAN"
     }
 
     stages {
-        stage("Datascientest Variables") {
+        stage("Datascientest Env Variables") {
             steps {
-                echo "School = ${env.NAME}""
+                echo "The build id is ${env.NAMES} "
             }
         }
     }
